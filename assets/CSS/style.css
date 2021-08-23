@@ -1,0 +1,472 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.mt {
+    margin-top: 8px!important;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+.mt8 {
+    margin-top: 8px !important;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-three {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+#main {}
+
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+#nav li {
+    position: relative;
+    list-style-type: none;
+}
+
+#nav>li>a {
+    text-transform: uppercase;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    font-size: 15px;
+}
+
+#nav li:hover>a {
+    background-color: #ccc;
+    color: black;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 170px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0px 16px;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#header .search-btn,
+#header .menu-mobile {
+    float: right;
+    color: white;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+#header .menu-mobile {
+    display: none;
+}
+
+#header .menu-mobile:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#header .search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(../img/slider/slider1.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    /*padding: 32px 16px;*/
+}
+
+#slider h2 {
+    font-weight: 400;
+}
+
+#slider .text-heading {
+    font-size: 24px;
+}
+
+#slider .text-desc {
+    margin-top: 25px;
+    font-size: 15px;
+    text-shadow: 0 0 10px black;
+}
+
+#content {
+    /*height: 1000px;*/
+}
+
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin: 0 auto;
+}
+
+#content .section-heading {
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+#content .section-slogan {
+    font-style: italic;
+    text-align: center;
+    opacity: 0.5;
+}
+
+#content .about {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+#content .member-list {
+    overflow: hidden;
+    padding: 32px 0;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+}
+
+#content .member-name {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 154px;
+}
+
+#content .tour-section {
+    background-color: black;
+    color: white;
+}
+
+.ticket {
+    background-color: white;
+    color: #757575;
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.ticket li {
+    padding: 8px 16px;
+    border-bottom: #ddd solid 1px;
+}
+
+.ticket .sold-out {
+    background-color: #f44336;
+    color: white;
+    padding: 4px 8px;
+    margin-left: 16px;
+}
+
+.ticket .number {
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+}
+
+.place-list {
+    overflow: hidden;
+    padding: 16px 8px;
+    margin: 0 -16px;
+}
+
+.place-item {
+    width: 33.333333%;
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-content {
+    background-color: white;
+    padding: 0 16px;
+    color: black;
+    font-size: 15px;
+}
+
+.place-heading {
+    /* margin: 15px 0; */
+    padding-top: 15px;
+}
+
+.place-time {
+    opacity: 0.5;
+    margin: 15px 0;
+}
+
+.place-desc {
+    margin: 15px 0;
+}
+
+.place-btn {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 11px 23px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.place-btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background-color: white;
+    position: relative;
+    width: 900px;
+    min-height: 300px;
+    max-width: calc(100% - 32px);
+    animation: anime 0.4s;
+}
+
+@keyframes anime {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    background-color: #009688;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 42px 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.modal-close:hover,
+.modal-btn:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.modal-boby,
+.modal-footer {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 30px;
+}
+
+.modal-btn {
+    width: 100%;
+    border: none;
+    background-color: #009688;
+    color: white;
+    padding: 18px 0;
+}
+
+.modal-help {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.modal-help a {
+    color: #2196f3;
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    /* line-height: 3px; */
+}
+
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-form .send-sub-btn {
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 11px 20px;
+    float: right;
+    /* margin-right: -8px; */
+}
+
+.contact-form .send-sub-btn:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#footer>p {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#footer a {
+    color: black;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+#footer p a {
+    text-decoration: underline;
+}
